@@ -23,6 +23,6 @@ steps:
       target: /
       host: ${{ secrets.DEPLOY_HOST }}
       user: ${{ secrets.DEPLOY_USER }}
-      key: $${{ secrets.DEPLOY_KEY }}
+      key: ${{ secrets.DEPLOY_KEY }}
       args: -rv --delete
 ```
