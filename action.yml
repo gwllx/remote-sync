@@ -1,0 +1,29 @@
+# action.yml
+name: "Remote Sync"
+description: "Sync files with a remote server using rsync"
+inputs:
+  args:
+    description: "Additional rysnc arguments"
+    required: false
+    default: ""
+  source:
+    description: "Source directory"
+    required: true
+  target:
+    description: "Destination directory"
+    required: true
+  host:
+    description: "Remote server hostname"
+    required: true
+  user:
+    description: "Remote server user"
+    required: true
+  key:
+    description: "Private SSH key"
+    required: true
+runs:
+  using: "docker"
+  image: "Dockerfile"
+branding:
+  icon: "refresh-cw"
+  color: "purple"
