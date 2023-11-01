@@ -1,17 +1,17 @@
 # Remote Sync
 
-A GitHub Action to sync files with a remote server using rsync.
+A GitHub Action to sync files with a remote host using rsync.
 
 ## Inputs
 
-| Input      | Description                         | Required | Default |
-| ---------- | ----------------------------------- | -------- | ------- |
-| ``source`` | Source directory to deploy.         | Yes      | -       |
-| ``target`` | Destination directory.              | Yes      | -       |
-| ``host``   | Remote server hostname.             | Yes      | -       |
-| ``user``   | Remote server username.             | Yes      | -       |
-| ``key``    | Private SSH key.                    | Yes      | -       |
-| ``args``   | Additional arguments for rsync. | No       | Empty   |
+| Name                  | Description                 |
+| --------------------- | --------------------------- |
+| ``source``            | Local source directory.     |
+| ``target``            | Remote target directory.    |
+| ``host``              | Remote host name.           |
+| ``user``              | Remote user.                |
+| ``key``               | Private SSH key.            |
+| ``args`` *[optional]* | Additional rsync arguments. |
 
 ## Example
 
@@ -19,8 +19,8 @@ A GitHub Action to sync files with a remote server using rsync.
 steps:
   - uses: gwllx/remote-sync@v1
     with:
-      source: *
-      target: /
+      source: .
+      target: /www
       host: ${{ secrets.DEPLOY_HOST }}
       user: ${{ secrets.DEPLOY_USER }}
       key: ${{ secrets.DEPLOY_KEY }}

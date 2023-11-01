@@ -1,22 +1,22 @@
 # action.yml
 name: "Remote Sync"
-description: "Sync files with a remote server using rsync"
+description: "Sync files with a remote host using rsync"
 inputs:
   args:
     description: "Additional rysnc arguments"
     required: false
     default: ""
   source:
-    description: "Source directory"
+    description: "Local source directory"
     required: true
   target:
-    description: "Destination directory"
+    description: "Remote target directory"
     required: true
   host:
-    description: "Remote server hostname"
+    description: "Remote host name"
     required: true
   user:
-    description: "Remote server user"
+    description: "Remote user"
     required: true
   key:
     description: "Private SSH key"
