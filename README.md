@@ -4,14 +4,14 @@ A GitHub Action to sync files with a remote host using rsync.
 
 ## Inputs
 
-| Name                  | Description                 |
-| --------------------- | --------------------------- |
-| ``source``            | Local source directory.     |
-| ``target``            | Remote target directory.    |
-| ``host``              | Remote host name.           |
-| ``user``              | Remote user.                |
-| ``key``               | Private SSH key.            |
-| ``args`` *[optional]* | Additional rsync arguments. |
+| Name                           | Description                 |
+| ------------------------------ | --------------------------- |
+| ``source``                     | Local source directory.     |
+| ``target``                     | Remote target directory.    |
+| ``host``                       | Remote host name.           |
+| ``user``                       | Remote user.                |
+| ``key``                        | Private SSH key.            |
+| ``args`` <sup>[optional]</sup> | Additional rsync arguments. |
 
 ## Example
 
